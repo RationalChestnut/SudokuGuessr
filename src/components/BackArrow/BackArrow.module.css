@@ -1,0 +1,11 @@
+.backArrow{
+  font-size: 2.5rem;
+  color: white;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.backArrow:hover {
+  cursor: pointer;
+}

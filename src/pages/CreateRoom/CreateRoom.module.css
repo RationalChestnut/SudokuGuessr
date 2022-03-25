@@ -1,0 +1,44 @@
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+.content{
+  margin: 10% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.formInput{
+  width: 100%;
+  margin-top: 0.8rem;
+  font-size: 1rem;
+}
+
+.formInput:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.formGeneric{
+  width: 100%;
+  padding: 1rem .8rem;
+  margin-top: 0.6rem;
+  font-size: 1rem;
+}
+
+.heading {
+  margin-top: 1rem;
+}
