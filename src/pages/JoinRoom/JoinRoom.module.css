@@ -35,3 +35,15 @@
 .heading {
   margin-top: 1rem;
 }
+
+.banner {
+  width: 500px;
+  height: 200px;
+  background-color: pink;
+  color: black;
+  border: 1px solid black;
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

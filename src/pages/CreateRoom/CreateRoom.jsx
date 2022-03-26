@@ -1,16 +1,47 @@
-import React, {useState} from 'react';
-
+import React, {useState, useContext} from 'react';
+import {useNavigate} from "react-router-dom";
+import axios from "axios";
 import styles from "./CreateRoom.module.css";
 import BackArrow from "../../components/BackArrow/BackArrow.jsx";
-import FormSubmitButton from "../../components/FormSubmitButton/FormSubmitButton.jsx"
+import FormSubmitButton from "../../components/FormSubmitButton/FormSubmitButton.jsx";
+
+import SocketContext from "../../context/SocketContext.jsx";
 
 const CreateRoom = ({text, to}) => {
+  const socket = useContext(SocketContext);
+  const navigate = useNavigate();
+  
   const [state, setState] = useState({
     name: "",
     numRounds: "5",
     roundTimeLimit: "5",
     difficulty: "easy",
+    theme: "Celebrities"
   })
+  
+  const generateUniqueId = async () => {
+    // Come up with a random six digit number
+    let number = Math.floor(100000 + Math.random() * 900000);
+
+    try {
+      // Check with db if it exists
+      const res = 
+        await axios.post("https://sudokuguessrbackend.yxli666.repl.co/checkroom", {
+            body: JSON.stringify({id: number}),
+            headers: {
+              "Content-Type": "application/json",
+            }
+          })             
+      
+      if (res.data.isAvailable){
+        console.log("available");
+        return number;
+      }
+      return 0;
+    } catch (error) {
+      console.log("Error has occured", e);
+    }
+  }
   
   const handleChange = e => {
     setState({
@@ -19,8 +50,15 @@ const CreateRoom = ({text, to}) => {
     })
   }
 
-  const handleSubmit = e => {
-    console.log("created");
+  const handleSubmit = async (e) => {    
+    e.preventDefault();
+
+    const id = await generateUniqueId();
+    
+    socket.emit("createRoom", {
+      id,
+      ...state,
+    });
   }
   
   return (
@@ -31,7 +69,7 @@ const CreateRoom = ({text, to}) => {
         <form className = {styles.form}>
           <div className = {styles.formInput}>
             <label htmlFor="name" className={styles.label}>Name: </label>
-            <input type="text" placeholder="Name: " name="name" id="name" value={state.name} onChange={handleChange} required className = {`${styles.formGeneric} ${styles.textInput}`} /> 
+            <input type="text" placeholder="Your username" name="name" id="name" value={state.name} onChange={handleChange} required className = {`${styles.formGeneric} ${styles.textInput}`} /> 
           </div>
           <div className = {styles.formInput}>
             <label htmlFor="numRounds" className={styles.label}># of Rounds: </label>
@@ -70,8 +108,14 @@ const CreateRoom = ({text, to}) => {
               <option value="hard">Hard</option>
             </select>
           </div>
-          
-          <FormSubmitButton text="Create" onSubmit={handleSubmit} />
+          <label htmlFor = "theme" className = {styles.label}>Theme</label>
+          <select name="theme" id="theme" value={state.theme} onChange={handleChange} required className = {styles.formGeneric}>
+              <option value="celebrities">Celebrities</option>
+              <option value="animals">Animals</option>
+              <option value="countries">Countries</option>
+              <option value="states">States</option>
+            </select>
+          <FormSubmitButton text="Create" onClick={handleSubmit} />
         </form>
       </div>
     </div>
