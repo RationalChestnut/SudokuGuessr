@@ -1,0 +1,60 @@
+.container{
+  width: 90%;
+  height: 95vh;
+  background-color: white;
+  border-radius: 10px;
+  margin: 2% auto;
+  padding: 3%;
+}
+
+.table{
+  margin-top: 2%;
+  width: 100%;
+  border: none;
+}
+
+.headerContent{
+  height: 10%;
+  border-bottom: 1px solid black;
+  font-size: 1.2rem;
+}
+
+.leaderboardHeader{
+  text-align: center;
+}
+
+.dataPoint{
+  border: none;
+  background-color: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.icons{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  font-size: 3rem;
+  text-align: center;
+  margin: 10px auto;
+}
+.icon:hover{
+  cursor: pointer;
+}
+
+td{
+  background-color: none;
+}
+
+@media screen and (max-width: 460px){
+  .headerContent{
+    font-size: .7rem;
+  }
+  .dataPoints{
+    font-size: 0.4rem;
+  }
+}

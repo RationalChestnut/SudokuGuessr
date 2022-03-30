@@ -1,25 +1,61 @@
-.container {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.headingMain {
-  text-align: center;
-  font-weight: 300;
-  font-size: 3rem;
-  margin-bottom: 2rem;
-/*   color: white; */
-}
-
-.buttons {
+.content{
+  margin: 5% auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 2rem;
+  border-radius: 5px;
 }
 
-.main {
-  background-color: whitesmoke;
-  padding: 4rem;
-  border-radius: 5px;
+.title {
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  font-size: 3.5rem;
+}
+
+.signUp{
+  text-decoration: underline;
+/*   color: purple; */
+  margin: 1rem 0rem;
+}
+
+.signUp:hover{
+  cursor: pointer;
+}
+
+.description{
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+}
+
+@media screen and (max-width: 700px){
+  .content{
+    width: 75%;
+  }
+  .description{
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 500px){
+  .content{
+    width: 90%;
+  }
+  .description{
+    font-size: 1rem;
+  }
 }

@@ -1,0 +1,20 @@
+{
+  "files": {
+    "src/components/SudokuBoard/SudokuBoard.jsx": [
+      {
+        "id": "7a6cf20c-aa2d-4272-9234-275809569c3d",
+        "line": 12,
+        "version": 26,
+        "index": 180
+      }
+    ],
+    "src/pages/Leaderboard/Leaderboard.jsx": [
+      {
+        "id": "ae727bfe-f438-4836-8335-d809438e4cbb",
+        "line": 37,
+        "version": 1695,
+        "index": 1259
+      }
+    ]
+  }
+}

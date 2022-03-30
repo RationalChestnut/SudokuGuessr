@@ -1,0 +1,310 @@
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+.upperContent{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.keywordHint {
+  margin-top: 5%;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.5rem;
+}
+
+.timerContainer {
+  margin-top: 1rem;
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+}
+
+    
+.left{
+  position: relative;
+  display: flex;
+/*   align-items: center; */
+  justify-content: center;
+}
+
+.image{
+  position: absolute;
+  width: 43rem;
+  height: 43rem;
+  object-fit: contain;
+}
+
+.guessContainer {
+  width: 50%;
+}
+
+.keywordHint {
+  margin-top: 2rem;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.5rem;
+}
+
+.guess {
+  margin-top: 1rem;
+  padding: 0.8rem 0.5rem;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.submitButton{
+  background-color: rgb(119, 212, 130);
+  font-size: 1.2rem;
+  padding: 1rem 0.8rem;
+  color: white;
+  border: none;
+  width: 100%;
+}
+
+.skipButton{
+  background-color: rgb(255, 143, 176);
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  color: white;
+  border: none;
+  width: 100%;
+}
+
+.submitButton:hover{
+  cursor: pointer;
+}
+
+.skipButton:hover{
+  cursor: pointer;
+}
+
+.description {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 0.3rem;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+}
+
+.itemsContainer{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
+.sudokuBoard {
+  margin: 0 auto;
+  width: 43rem;
+  height: 43rem;
+  grid-gap: 0px;
+  border-spacing: 0;
+  position: absolute;
+}
+
+.sudokuInput {
+  width: 100%;
+  height: 100%;
+  border: none;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #cdd8ee;
+}
+
+.sudokuInput:focus {
+  background-color: #e5eeff;
+}
+
+tr {
+  margin: 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+td {
+  margin: 0;
+  text-align: center;
+  border: 1px solid black;
+  font-size: 1.5rem;
+  background-color: #9ebeff;
+}
+
+td:nth-child(3n){
+  border-right: 3px solid black;
+}
+
+tr:nth-child(3n) > td{
+  border-bottom: 3px solid black;
+}
+
+tr:last-child > td{
+  border-bottom: none
+}
+td:last-child{
+  border-right: none
+}
+
+
+.timerContainer{
+  color: white;
+  text-align: center;
+  width: 100%;
+  font-size: 4rem;
+  padding-bottom: 5%;
+}
+
+.buttons{
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.gameInfo{
+  text-align: left;
+}
+
+.correct{
+/*   opacity: 0.2; */
+  background-color: rgba(158, 190, 255, 0.1);
+}
+
+.correct:focus{
+  background-color: rgba(158, 190, 255, 0.1);
+}
+
+.right{
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1500px){
+  .sudokuBoard{
+    width: 38rem;
+    height: 38rem;
+  }
+  .image{
+    width: 38rem;
+    height: 38rem;
+  }
+}
+@media screen and (max-width: 1300px){
+  .itemsContainer{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .left{
+    height: 38fr;
+    width: 38fr;
+  }
+  .right{
+    margin: 40rem auto;
+    flex-direction: column-reverse;
+  }
+  .buttons, .guessContainer, .submitButton, .skipButton{
+    width: 100%;
+  }
+  .gameInfo{
+    margin-top: 5%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1000px){
+  .sudokuBoard{
+    width: 40rem;
+    height: 40rem;
+  }
+  .image{
+    width: 40rem;
+    height: 40rem;
+  }
+  .right{
+    margin: 42rem auto;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 720px){
+  .sudokuBoard{
+    width: 35rem;
+    height: 35rem;
+  }
+  .image{
+    width: 35rem;
+    height: 35rem;
+  }
+  .right{
+    margin: 37rem auto;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 600px){
+  .sudokuBoard{
+    width: 30rem;
+    height: 30rem;
+  }
+  .image{
+    width: 30rem;
+    height: 30rem;
+  }
+  .right{
+    margin: 32rem auto;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 515px){
+  .sudokuBoard{
+    width: 27rem;
+    height: 27rem;
+  }
+  .image{
+    width: 27rem;
+    height: 27rem;
+  }
+  .right{
+/*     margin-top: 27rem; */
+    margin: 5rem auto;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 440px){
+  .sudokuBoard{
+    width: 22rem;
+    height: 22rem;
+  }
+  .image{
+    width: 22rem;
+    height: 22rem;
+  }
+  .right{
+    margin: 11rem auto;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 360px){
+  .sudokuBoard{
+    width: 19rem;
+    height: 19rem;
+  }
+  .image{
+    width: 19rem;
+    height: 19rem;
+  }
+  .right{
+    margin: 20rem auto;
+    flex-direction: column-reverse;
+  }
+}

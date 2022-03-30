@@ -1,0 +1,28 @@
+.loading {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 100;
+  background-color: #285fcc;
+  color: white;
+}
+
+.icon {
+  position: absolute;
+/*   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
