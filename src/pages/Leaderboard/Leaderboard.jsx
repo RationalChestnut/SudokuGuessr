@@ -78,18 +78,18 @@ const Leaderboard = () => {
         // Should also highlight the person's name if they are top ten
             return (
               <tr className = {styles.row}>
-                <td style = {{"border" : "none", "backgroundColor" : "none"}}  className = {styles.dataPoint}>{rank}</td>
-                <td style = {{"border" : "none", "backgroundColor" : "none"}}  className = {styles.dataPoint}>{user.username}</td>
-                <td style = {{"border" : "none", "backgroundColor" : "none"}} className = {styles.dataPoint}>{user.high.theme}</td>
-                <td style = {{"border" : "none", "backgroundColor" : "none"}} className = {styles.dataPoint}>{user.high.score}</td>
+                <td style = {{"border" : "none", "backgroundColor" : "white"}}  className = {styles.dataPoint}>{rank}</td>
+                <td style = {{"border" : "none", "backgroundColor" : "white"}}  className = {styles.dataPoint}>{user.username}</td>
+                <td style = {{"border" : "none", "backgroundColor" : "white"}} className = {styles.dataPoint}>{user.high.theme}</td>
+                <td style = {{"border" : "none", "backgroundColor" : "white"}} className = {styles.dataPoint}>{user.high.score}</td>
               </tr>
             );
           })}
           {isTopTen === false ? <tr className = {styles.userRow}>
-              <td style = {{"border" : "none", "backgroundColor" : "none"}} className = {styles.dataPoint}>Unranked</td>
-              <td style = {{"border" : "none", "backgroundColor" : "none"}} className = {styles.dataPoint}>{userOfGame.username}</td>
-              <td style = {{"border" : "none", "backgroundColor" : "none"}}  className = {styles.dataPoint}>{userOfGame.theme}</td>
-              <td style = {{"border" : "none", "backgroundColor" : "none"}}  className = {styles.dataPoint}>{userOfGame.score}</td>
+              <td style = {{"border" : "none", "backgroundColor" : "white"}} className = {styles.dataPoint}>Unranked</td>
+              <td style = {{"border" : "none", "backgroundColor" : "white"}} className = {styles.dataPoint}>{userOfGame.username}</td>
+              <td style = {{"border" : "none", "backgroundColor" : "white"}}  className = {styles.dataPoint}>{userOfGame.theme}</td>
+              <td style = {{"border" : "none", "backgroundColor" : "white"}}  className = {styles.dataPoint}>{userOfGame.score}</td>
             </tr> : <div></div>}
         </table>
         <div className = {styles.icons}>

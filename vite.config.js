@@ -8,6 +8,6 @@ export default {
   plugins: [reactRefresh()],
   server: {
     host: '0.0.0.0',
-    hmr: false
+    hmr: false,
   }
 }

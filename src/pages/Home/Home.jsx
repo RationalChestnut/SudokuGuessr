@@ -9,7 +9,7 @@ const Home = () => {
     <div className={styles.container}>  
       <div className={styles.content}>
         <h1 className={styles.title}>Sudoku Guessr</h1>
-        <p className = {styles.description}>The object of the game is simple: Guess as many images as possible. You can do so by filling out the sudoku to reveal a part of the image. The highest number of images guessed wins and gets a spot on the esteemed hall of fame</p>
+        <p className = {styles.description}>Fill out the sudoku to reveal part of the image. Guess as many images as possible. The users with the highest number of images guessed gets a spot in the Hall of Fame!</p>
         <MainButton to={"/start"} text="Play"/>
       </div>
     </div>

@@ -43,7 +43,7 @@ const Sudoku = () => {
   const [board, setBoard] = useState([]);
   const [imageLink, setImageLink] = useState("");
   const [keyword, setKeyword] = useState("");
-  const [timeLeft, setTimeLeft] = useState(timeLimit * 60);
+  const [timeLeft, setTimeLeft] = useState(timeLimit * 120);
   const [gameOver, setGameOver] = useState(false);
   const [guess, setGuess] = useState("");
   const [isWrong, setIsWrong] = useState(false);
@@ -177,10 +177,7 @@ const Sudoku = () => {
     setSudoku(res.data.sudoku.puzzle);
     setBoard(res.data.sudoku.puzzle);
     setSolvedSudoku(res.data.sudoku.solution);
-
-    console.log(res.data.sudoku.solution);
-
-
+    
     setLoading(false);
   }
   
@@ -216,7 +213,9 @@ const Sudoku = () => {
       }
     }
     if(counter == 9){
-      setSquaresComplete({...squaresComplete, one: true});
+      setSquaresComplete((prevSquaresComplete) => {
+        return {...prevSquaresComplete, one: true};
+      });
     }
     counter = 0;
 
@@ -229,7 +228,9 @@ const Sudoku = () => {
       }
     }
     if(counter == 9){
-      setSquaresComplete({...squaresComplete, two: true});
+      setSquaresComplete((prevSquaresComplete) => {
+        return {...prevSquaresComplete, two: true};
+      });
     }
     counter = 0;
 
@@ -242,7 +243,9 @@ const Sudoku = () => {
       }
     }
     if(counter == 9){
-      setSquaresComplete({...squaresComplete, three: true});
+      setSquaresComplete((prevSquaresComplete) => {
+        return {...prevSquaresComplete, three: true};
+      });
     }
     counter = 0;
     
@@ -255,7 +258,9 @@ const Sudoku = () => {
       }
     }
     if(counter == 9){
-      setSquaresComplete({...squaresComplete, four: true});
+      setSquaresComplete((prevSquaresComplete) => {
+        return {...prevSquaresComplete, four: true};
+      });
     }
     counter = 0;
 
@@ -268,7 +273,9 @@ const Sudoku = () => {
       }
     }
     if(counter == 9){
-      setSquaresComplete({...squaresComplete, five: true});
+      setSquaresComplete((prevSquaresComplete) => {
+        return {...prevSquaresComplete, five: true};
+      });
     }
     counter = 0;
 
@@ -281,7 +288,9 @@ const Sudoku = () => {
       }
     }
     if(counter == 9){
-      setSquaresComplete({...squaresComplete, six: true});
+      setSquaresComplete((prevSquaresComplete) => {
+        return {...prevSquaresComplete, six: true};
+      });
     }
     counter = 0;
 
@@ -294,7 +303,9 @@ const Sudoku = () => {
       }
     }
     if(counter == 9){
-      setSquaresComplete({...squaresComplete, seven: true});
+      setSquaresComplete((prevSquaresComplete) => {
+        return {...prevSquaresComplete, seven: true};
+      });
     }
     counter = 0;
 
@@ -307,7 +318,9 @@ const Sudoku = () => {
       }
     }
     if(counter == 9){
-      setSquaresComplete({...squaresComplete, eight: true});
+      setSquaresComplete((prevSquaresComplete) => {
+        return {...prevSquaresComplete, eight: true};
+      });
     }
     counter = 0;
 
@@ -320,7 +333,9 @@ const Sudoku = () => {
       }
     }
     if(counter == 9){
-      setSquaresComplete({...squaresComplete, nine: true});
+      setSquaresComplete((prevSquaresComplete) => {
+        return {...prevSquaresComplete, nine: true};
+      });
     }
     counter = 0;
   } 
@@ -345,7 +360,7 @@ const Sudoku = () => {
               classes += ` ${styles.correct}`;
             }
             curRow.push(
-              <td className={squaresComplete.one ? styles.correct: ""}>
+              <td className={squaresComplete.one ? styles.correct : ""}>
                 <input 
                   type = "text" 
                   className={classes} 
@@ -364,7 +379,7 @@ const Sudoku = () => {
               classes += ` ${styles.correct}`;
             }
             curRow.push(
-              <td className={squaresComplete.two ? styles.correct: ""}>
+              <td className={squaresComplete.two ? styles.correct : ""}>
                 <input 
                   type = "text" 
                   className={classes} 
@@ -384,7 +399,7 @@ const Sudoku = () => {
               classes += ` ${styles.correct}`;
             }
             curRow.push(
-              <td className={squaresComplete.three ? styles.correct: ""}>
+              <td className={squaresComplete.three ? styles.correct : ""}>
                 <input 
                   type = "text" 
                   className={classes} 
@@ -403,7 +418,7 @@ const Sudoku = () => {
               classes += ` ${styles.correct}`;
             }
             curRow.push(
-              <td className={squaresComplete.four ? styles.correct: ""}>
+              <td className={squaresComplete.four ? styles.correct : ""}>
                 <input 
                   type = "text" 
                   className={classes} 
@@ -422,7 +437,7 @@ const Sudoku = () => {
               classes += ` ${styles.correct}`;
             }
             curRow.push(
-              <td className={squaresComplete.five ? styles.correct: ""}>
+              <td className={squaresComplete.five ? styles.correct : ""}>
                 <input 
                   type = "text" 
                   className={classes} 
@@ -441,7 +456,7 @@ const Sudoku = () => {
               classes += ` ${styles.correct}`;
             }
             curRow.push(
-              <td className={squaresComplete.six ? styles.correct: ""}>
+              <td className={squaresComplete.six ? styles.correct : ""}>
                 <input 
                   type = "text" 
                   className={classes} 
@@ -460,7 +475,7 @@ const Sudoku = () => {
               classes += ` ${styles.correct}`;
             }
             curRow.push(
-              <td className={squaresComplete.seven ? styles.correct: ""}>
+              <td className={squaresComplete.seven ? styles.correct : ""}>
                 <input 
                   type = "text" 
                   className={classes} 
@@ -479,7 +494,7 @@ const Sudoku = () => {
               classes += ` ${styles.correct}`;
             }
             curRow.push(
-              <td className={squaresComplete.eight ? styles.correct: ""}>
+              <td className={squaresComplete.eight ? styles.correct : ""}>
                 <input 
                   type = "text" 
                   className={classes} 
@@ -498,7 +513,7 @@ const Sudoku = () => {
               classes += ` ${styles.correct}`;
             }
             curRow.push(
-              <td className={squaresComplete.nine ? styles.correct: ""}>
+              <td className={squaresComplete.nine ? styles.correct : ""}>
                 <input 
                   type = "text" 
                   className={classes} 

@@ -1,10 +1,10 @@
 .container{
   width: 90%;
-  height: 95vh;
+  height: 95%;
   background-color: white;
   border-radius: 10px;
   margin: 2% auto;
-  padding: 3%;
+  padding: 2%;
 }
 
 .table{
@@ -16,7 +16,7 @@
 .headerContent{
   height: 10%;
   border-bottom: 1px solid black;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .leaderboardHeader{
@@ -28,6 +28,7 @@
   background-color: none;
   border-radius: 5px;
   padding: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .icons{
@@ -38,9 +39,9 @@
 }
 
 .icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
-  margin: 10px auto;
+  margin: 5px auto;
 }
 .icon:hover{
   cursor: pointer;

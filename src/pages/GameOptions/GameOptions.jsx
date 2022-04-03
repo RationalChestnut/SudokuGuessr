@@ -12,7 +12,7 @@ const GameOptions = () => {
   const [state, setState] = useState({
     name: "",
     difficulty: "easy",
-    theme: "countries"
+    theme: "animals"
   })
   const [isError, setIsError] = useState(false);
   const [isWarning, setIsWarning] = useState(false);
@@ -65,7 +65,7 @@ const GameOptions = () => {
       setState({
         name: "",
         difficulty: "easy",
-        theme: "countries",
+        theme: "animals",
         score: 0,
       });
       setLoading(false);
@@ -82,7 +82,7 @@ const GameOptions = () => {
         <form className = {styles.form}>
           <div className = {styles.formInput}>
             <label htmlFor="name" className={styles.label}>Username: </label>
-            <input type="text" placeholder="you can't use the same name twice everytime cuz it's arcade style" name="name" id="name" value={state.name} onChange={handleChange} required={true} className = {`${styles.formGeneric} ${styles.textInput}`} /> 
+            <input type="text" placeholder="Pick a unique name for a (potential) spot in the Hall of Fame!" name="name" id="name" value={state.name} onChange={handleChange} required={true} className = {`${styles.formGeneric} ${styles.textInput}`} /> 
           </div>
           <div className = {styles.formInput}>
             <label htmlFor="difficulty" className={styles.label}>Difficulty</label>
