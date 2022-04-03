@@ -1,13 +1,7 @@
-## Running React on Repl.it
+# Sudoku Guessr
 
-[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
+## Features
+Made to provide a fun and competitive game of sudoku which has a leaderboard. The aim is to guess as many images as possible, and you unlock pieces of the image by completing squares of the sudoku
 
-[Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
-
-Using the two in conjunction is one of the fastest ways to build a web app.
-
-### Getting Started
-- Hit run
-- Edit [App.jsx](#src/App.jsx) and watch it live update!
-
-By default, Replit runs the `dev` script, but you can configure it by changing the `run` field in the `.replit` file.
+## Tech Used
+We used Repl DB for our database. Includes four APIS: one for generating the sudoku and three for generating images. Used React for frontend and Node JS for backend
