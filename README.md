@@ -11,6 +11,7 @@ Originally built for the Repl hackathon, but we have plans to rewrite certain pa
   - Sudoku Game Board
   - Image which is revealed as the Sudoku is played
   - Leaderboard
+  - Mobile Responsive
 
 ## Tech Used
 We used Repl DB for our database. Includes four APIS: one for generating the sudoku and three for generating images. Used React for frontend and Node JS for backend
